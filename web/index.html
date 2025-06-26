@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Películas</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  
+
+  <script type="module" src="scripts.js"></script>
+    
+</head>
+<body>
+  <h1>Catálogo de Películas</h1>
+
+  <div id="search-container">
+    <span id="search-icon">🔍</span>
+    <input id="search" type="text" placeholder="Buscar por título..." />
+  </div>
+
+  <section id="form-container">
+    <h2>Agregar nueva película</h2>
+    <form id="movie-form">
+      <input type="text" name="title" placeholder="Título" required />
+      <input type="number" name="year" placeholder="Año" required />
+      <input type="text" name="director" placeholder="Director" required />
+      <input type="number" name="duration" placeholder="Duración (min)" required />
+      <input type="url" name="poster" placeholder="URL del póster" required />
+      <input type="number" step="0.1" name="rate" placeholder="Calificación (1-10)" min="0" max="10" required />
+      <input type="text" name="genre" placeholder="Géneros separados por coma (ej: Drama, Acción)" required />
+      <button type="submit">Agregar</button>
+    </form>
+  </section>
+
+  <main>
+    <p id="loading">Cargando películas...</p>
+  </main>
+</body>
+</html>
